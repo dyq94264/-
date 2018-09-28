@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+	</head>
+	<body>
+		 <div class="body1">
+		 	<div id="app">
+		 		<div class="shang">
+		 			<div class="bt"><h3>Notes APP_Vue.js</h3></div>
+		 			<button @click="click">新建笔记</button>
+		 		</div>
+		 		<hr />
+		 		<div class="tan">
+		 			<span>
+		 				请输入标题：<input v-model="news.message" placeholder="">
+		 			</span>
+		 			<br />
+		 			<span style="display: block;margin-top: 20px;margin-bottom: 20px;">
+		 				<span class="dw">请输入内容：</span><textarea name="" id="" cols="30" rows="10" v-model="news.neirong"></textarea>
+		 			</span>
+		 			<button @click="tj">确定</button>
+		 			<button @click="qx">取消</button>
+		 		</div>
+		 		<div class="xia">
+		 			<ul>
+		 				<li v-for="arr in arrs">
+		 					<h3>标题：</h3><input type="" name="" id="" / :value="arr.message">
+		 					<h3 style="margin-top: 20px;">内容：</h3><input type="" name="" id="" / :value="arr.neirong">
+		 					<button style="float: right;margin-top: 10px;" @click="deletearr($index)"> 删除</button>
+		 					<span id="" style="float: right;margin-top: 10px;margin-right: 50px;">
+		 						<span>{{nowtime}}保存</span>
+		 					</span>
+		 				</li>
+		 			</ul>
+		 		</div>
+		 		
+		 		
+		 	</div>
+		 </div>
+		 
+		
+		<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+		<script>
+			new Vue({
+	el:"#app",
+	data:{ 
+		nowtime:'',
+		news:{
+		     	message:'',
+		        neirong:'',
+		        sj:''
+		     }
+		,
+		arrs:[
+		     {
+		     	"message":"标题",
+		     	"neirong":"内容",
+		     	"sj":""
+		     }
+		]
+	},
+	methods:{
+		click:function(){
+			var a=document.getElementsByClassName('tan')[0];
+			a.style.display='block';
+		},
+		tj:function(){
+			this.arrs.push(this.news);
+			this.news = {message: '', neirong:'',sj:''};
+			var a=document.getElementsByClassName('tan')[0];
+			a.style.display='none';
+			var d=new Date;
+			this.news.sj=d;
+			
+
+			console.log(d);
+		},
+		qx:function(){
+			var a=document.getElementsByClassName('tan')[0];
+			a.style.display='none';
+		},
+		deletearr:function(index){
+                this.arrs.splice(index,1);
+            }
+	}
+})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+.body1{
+	width: 1200px;
+	margin: 0 auto;
+}
+.bt{
+	display: table;
+	margin: 0 auto;
+}
+.shang button{
+	padding: 5px 20px;
+	background-color: white;
+	border-radius: 10px;
+	color: blue;
+	font-size: 20px;
+	font-weight: 600;
+}
+.tan{
+	border: 1px solid #999;
+	width: 50%;
+	margin: 0 auto;
+	padding: 40px;
+	display: none;
+	position: fixed;
+	top: 200px;
+	left: 356px;
+	background-color: white;
+}
+.tan button{
+	padding: 5px 20px;
+	background-color: darkslateblue;
+	border-radius: 10px;
+	color: white;
+	margin-left: 100px;
+	position: relative;
+}
+.tan input{
+	width: 80%;
+}
+.tan textarea{
+	    width: 478px;
+    height: 75px;
+    margin-left: 96px;
+}
+.dw{
+	position: absolute;
+	top: 84px;
+}
+.xia ul{
+	padding: 0;
+}
+.xia ul li{
+	list-style: none;
+	width: 96%;
+	border: 3px solid #999;
+	overflow: hidden;
+	padding: 20px;
+	margin-top: 5px;
+}
+.xia ul li h3{
+	display: table;
+	float: left;
+	margin: 0;
+}
+.xia ul li input{
+	float: left;
+	width: 100%;
+}
